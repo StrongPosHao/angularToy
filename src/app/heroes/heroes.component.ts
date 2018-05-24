@@ -4,16 +4,13 @@ import { HeroService} from '../hero.service';
 
 @Component({
   selector: 'app-heros',
-  templateUrl: './heros.component.html',
-  styleUrls: ['./heros.component.css']
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css']
 
 })
-export class HerosComponent implements OnInit {
+export class HeroesComponent implements OnInit {
   heroes: Hero[];
-  selectedHero: Hero;
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
+
   constructor(private heroService: HeroService) { }
 
   getHeroes(): void {
